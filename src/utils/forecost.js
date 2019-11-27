@@ -11,7 +11,7 @@ const forecast = (lat, long, callback) => {
         } else if (response.body.error)
             callback('either The given location is invalid or Poorly formatted request.')
         else
-            callback(undefined, response.body.daily.data[0].summary + ' It is currently ' + response.body.currently.temperature + ' degress out. There is a ' + response.body.currently.precipProbability + '% chance of rain.')
+            callback(undefined, response.body.daily.data[0].summary + ' The moonphase is:' + response.body.daily.data[0].moonPhase + ' And the Humidity is:' + response.body.daily.data[0].humidity + ' It is currently ' + response.body.currently.temperature + ' degress out. There is a ' + response.body.currently.precipProbability + '% chance of rain.')
     })
 }
 module.exports = forecast
