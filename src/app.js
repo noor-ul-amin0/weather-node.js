@@ -90,6 +90,7 @@ app.get('*', (req, res) => {
         name: 'Noor Arman'
     })
 })
-app.listen(3000, () =>
-    console.log("Server is running up and listening at port 3000")
+const port = process.env.PORT || 3000
+app.listen(port, () =>
+    console.log("Server is running up and listening at port" + port)
 );
